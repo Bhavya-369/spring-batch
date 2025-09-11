@@ -12,5 +12,9 @@ spring:
 
   batch:
     jdbc:
-      initialize-schema: always
+      initialize-schema: always   # Creates Spring Batch metadata tables
 
+  sql:
+    init:
+      mode: always                # Run initialization scripts
+      platform: mysql             # Use mysql-specific schema if available
